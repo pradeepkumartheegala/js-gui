@@ -15,14 +15,14 @@
 <body>
   <main class="container-fluid">
 
-    <h1>JavaScript for interactive apps!</h1>
-    <h3>Right-click / Inspect, then select console</h3>
+    <h1>finding the number of people in the class</h1>
+    
 
     <p>Enter number of Students:
       <input id="Students" type="number">
     </p>
 
-    <button id="clicker" onclick="calcStudents()" class="btn btn-primary">Click me!</button>
+    <button id="clicker" class="btn btn-primary">Click me!</button>
 
     <p id="result"></p>
 
@@ -35,21 +35,18 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function add(students) {
+      return students + 2;
     }
-    console.log('Defined add=' + add)
+    console.log('calculating the students=' + add)
 
     console.log('Declare event listeners .......................')
 
-    document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
-      console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
-      console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
-      document.getElementById('result').innerHTML = ans
+    document.getElementById('clicker').addEventListener('click', ()=>{
+      const total = parseInt(document.getElementById('Students').value)
+console.log('i=' + total)
+const ans = 'People per course ' + add(total) + '.'
+document.getElementById('result').innerHTML = ans
     })
 
     console.log('SCRIPT END')
