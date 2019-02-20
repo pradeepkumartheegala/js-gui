@@ -16,7 +16,7 @@
   <main class="container-fluid">
 
     <h1>finding the number of people in the class</h1>
-    
+
     <p>Enter number of Students:
       <input id="Students" type="number">
     </p>
@@ -41,11 +41,11 @@
 
     console.log('Declare event listeners .......................')
 
-    document.getElementById('clicker').addEventListener('click', ()=>{
+    document.getElementById('clicker').addEventListener('click', () => {
       const total = parseInt(document.getElementById('Students').value)
-console.log('i=' + total)
-const ans = 'People per course ' + add(total) + '.'
-document.getElementById('result').innerHTML = ans
+      console.log('i=' + total)
+      const ans = 'People per course ' + add(total) + '.'
+      document.getElementById('result').innerHTML = ans
     })
 
     console.log('SCRIPT END')
